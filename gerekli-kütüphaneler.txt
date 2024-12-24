@@ -1,0 +1,5 @@
+pip install pandas
+pip install torch
+pip install transformers
+pip install openpyxl
+pip install nltk
