@@ -1,0 +1,1 @@
+# NLP-Urun-Yorumlarinda-Tutarsizlik
