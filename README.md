@@ -72,8 +72,6 @@ Yorumlar, her iki model ile analiz edilir ve sonuçlar karşılaştırılır. Uz
 
 ### Gerekli Kütüphaneler ve Yükleme Komutları  
 Aşağıdaki komutlar, Python 3.9+ ortamında çalıştırılmalıdır.
-
-#### 1. **Pandas**  
 - pip install pandas
 - pip install transformers
 - pip install torch
