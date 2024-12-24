@@ -44,6 +44,9 @@ Kaggle bağlantıları:
 
 3. **Tutarlılık Tespiti**:
    - Duygu analizi sonuçları ile yıldız puanları karşılaştırılarak yorumlar **tutarlı**, **tutarsız** veya **nötr** olarak işaretlendi.
+   - 
+-   **main.py**: Tutarsızlıkları tespit eder ve tüm verilerle birlikte analiz sonuçlarını kaydeder.
+-   **tutarsizlik.py**: Sadece tutarsız yorumları filtreler, temizler ve ayrı bir dosyaya kaydeder.
 
 4. **Sonuçların Kaydedilmesi**:
    - Genel analiz sonuçları `product_review_analysis.csv` dosyasına kaydedildi.
