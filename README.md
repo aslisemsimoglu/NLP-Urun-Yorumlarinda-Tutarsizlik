@@ -1,3 +1,4 @@
+
 # NLP Dersi Dönem Sonu Projesi  
 
 ## Ürün Yorumlarında Duygu Analizi ve Tutarlılık Tespiti  
@@ -73,8 +74,8 @@ Yorumlar, her iki model ile analiz edilir ve sonuçlar karşılaştırılır. Uz
 Aşağıdaki komutlar, Python 3.9+ ortamında çalıştırılmalıdır.
 
 #### 1. **Pandas**  
-pip install pandas
-pip install transformers
-pip install torch
-pip install nltk
-pip install openpyxl
+- pip install pandas
+- pip install transformers
+- pip install torch
+- pip install nltk
+- pip install openpyxl
