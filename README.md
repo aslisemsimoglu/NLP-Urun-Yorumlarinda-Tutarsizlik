@@ -78,4 +78,3 @@ pip install transformers
 pip install torch
 pip install nltk
 pip install openpyxl
-
