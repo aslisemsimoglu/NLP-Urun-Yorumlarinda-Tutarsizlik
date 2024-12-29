@@ -1,54 +1,51 @@
-# NLP Dersi Dönem Sonu Projesi
-
+# NLP Dersi Dönem Sonu Projesi Raporu  
+**Ad Soyad**: Aslı Şemşimoğlu  
+**Öğrenci Numarası**: 212923001  
+---
 ## Türkçe Ürün Yorumlarında Duygu Analizi ve Tutarlılık Tespiti
 
 Bu proje, bir Türkçe e-ticaret ürün yorumları veri seti üzerinde duygu analizi ve tutarlılık tespiti yapmak için geliştirilmiştir. Amaç, yorumların yıldız puanları ile olan tutarlılığını analiz ederek sonuçları detaylı bir şekilde raporlamaktır.
 
----
 
-## Kullanılan Teknolojiler
-- Python 3.9+
-- Transformers (Hugging Face)
-- PyTorch
-- NLTK
-- Pandas
-- OpenPyXL
+## Projenin Amacı 🎯  
+Bu proje, **Türkçe ürün yorumlarının** analizi üzerinden duygu tespiti ve yıldız puanlarıyla tutarlılığın kontrol edilmesini amaçlamaktadır. Kullanıcı memnuniyetini ve yorumlardaki ortak ifadeleri incelemek için çeşitli NLP teknikleri kullanılmıştır.  
 
 ---
 
-## Veri Seti
-Proje, Türkçe ürün yorumlarını içeren **430.916 satırlık** bir veri seti üzerinde çalışmaktadır. Veri seti şu sütunları içerir:
-- `product_id`: Ürünün kimlik numarası.
-- `title`: Yorum başlığı (eksik olanlar doldurulmuştur).
-- `review`: Kullanıcı yorumu metni.
-- `star`: Yıldız puanı (1-5).
-- `clap`: Beğeni sayısı.
-- `thumbsdown`: Olumsuz geri bildirim sayısı.
+## Veri Seti Tanımı 📊  
+**Veri Seti Adı**: Turkish Product Review Dataset  
+**Sütunlar:**  
+- **`product_id`**: Ürüne özgü kimlik numarası  
+- **`title`**: Yorum başlığı  
+- **`review`**: Kullanıcı yorumu  
+- **`star`**: Yıldız puanı (1-5)  
+- **`clap`**: Beğeni sayısı  
+- **`thumbsdown`**: Olumsuz geri bildirim sayısı  
 
-Kaggle bağlantıları:
-- [Product Review Analysis](https://www.kaggle.com/datasets/aslemimolu/product-review-analysis)
-- [Product Review Analysis Comparison](https://www.kaggle.com/datasets/aslemimolu/product-review-analysis-comparison)
-- [Tutarsız Yorumlar](https://www.kaggle.com/datasets/aslemimolu/tutarsiz-yorumlar)
+**Toplam Veri:** 430,916 yorum  
 
 ---
 
-## Proje Aşamaları
-1. **Veri Temizleme**:
-   - Eksik başlıklar dolduruldu.
-   - Geçersiz veya boş yorumlar temizlendi.
-   - Noktalama işaretleri, sayılar ve Türkçe stop words kaldırıldı.
+## Projede Yapılanlar ✅  
 
-2. **Duygu Analizi**:
-   - `savasy/bert-base-turkish-sentiment-cased` ve `saribasmetehan/bert-base-turkish-sentiment-analysis` modelleri kullanılarak yorumlar sınıflandırıldı.
-   - Uzun metinler bölünerek analiz edildi.
+- **Veri Temizleme ve Ön İşleme**  
+  - Eksik başlıklar "Eksik Başlık" ile dolduruldu ✅  
+  - Yorum metinlerinden gereksiz karakterler ve stop words temizlendi ✅  
 
-3. **Tutarlılık Tespiti**:
-   - Duygu analizi sonuçları ile yıldız puanları karşılaştırılarak yorumlar **tutarlı**, **tutarsız** veya **nötr** olarak işaretlendi.
--   **main.py**: Tutarsızlıkları tespit eder ve tüm verilerle birlikte analiz sonuçlarını kaydeder.
--   **tutarsizlik.py**: Sadece tutarsız yorumları filtreler, temizler ve ayrı bir dosyaya kaydeder.
+- **Kelime Bulutu Analizi**  
+  - Temizlenmiş yorumlardan kelime bulutları oluşturuldu ✅  
 
-4. **Sonuçların Kaydedilmesi**:
-   - Genel analiz sonuçları `product_review_analysis.csv` dosyasına kaydedildi.
-   - Tutarsız yorumlar ayrı bir Excel dosyasına (`tutarsiz_yorumlar.xlsx`) aktarıldı.
+- **Duygu Analizi**  
+  - `savasy/bert-base-turkish-sentiment-cased` modeli kullanılarak olumlu, olumsuz ve nötr sınıflandırma yapıldı ✅  
+
+- **Tutarlılık Tespiti**  
+  - Yıldız puanları ile duygu sonuçlarının uyumu kontrol edildi ✅  
+  - Tutarsız yorumlar belirlendi ve ayrı bir dosyada kaydedildi ✅  
+
+- **Model Eğitimi**  
+  - Yorumlar üzerinde fine-tuning işlemi başarıyla tamamlandı ✅  
 
 ---
+
+## Sonuç ve Özet 🌟  
+Proje kapsamında, Türkçe ürün yorumları analiz edilmiştir. Yıldız puanlarıyla uyumlu olmayan yorumlar tespit edilmiştir.  
